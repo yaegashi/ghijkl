@@ -1,0 +1,17 @@
+!!! XML
+!!! 5
+%html
+  %head
+    %meta(charset="UTF-8")
+    %title {{site.brand}}: Update: {{page.title}}
+    {% stylesheet app %}
+    /[if lt IE 9]
+      %script{src:"http://html5shim.googlecode.com/svn/trunk/html5.js"}
+  %body
+    {% haml navbar.haml %}
+    .container
+      %h1.page-header
+        {{page.title}}
+        %small {{page.date | date_to_long_string}}
+      {{content}}
+    {% javascript app %}

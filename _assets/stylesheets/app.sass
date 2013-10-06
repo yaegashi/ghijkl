@@ -1,0 +1,20 @@
+// Bootstrap ブランドカラーをいじってみる
+// http://getbootstrap.com/customize/
+$brand-primary: #8b628a
+$brand-success: #4040a0
+$brand-warning: #d9d91f
+$brand-danger:  #e9532f
+$brand-info:    #c0b0b0
+
+// 固定 Navbar に必要なカスタマイズ
+// http://getbootstrap.com/components/#navbar-fixed-top
+body
+  padding-top: 70px
+
+// pygmentaize -S default -f html
+// が出力したフラットなスタイルシートを特定スコープ配下に読み込む
+.highlight
+  code
+    @import pygments
+
+@import bootstrap

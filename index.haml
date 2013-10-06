@@ -1,0 +1,20 @@
+---
+title: ホーム
+slug: home
+layout: default
+---
+.jumbotron
+  .container
+    %h1 {{site.brand}}
+    %p.lead
+      {{site.brand}} のホームページへようこそ。
+    %p.lead
+      %a(href="http://jekyllrb.com") Jekyll
+      と
+      %a(href="http://getbootstrap.com") Twitter Bootstrap
+      により静的に構築されたサイトの例です。
+    %p
+      %a.btn.btn-primary.btn-lg(href="{{site.baseurl}}/updates/")
+        更新情報 &raquo;
+      %a.btn.btn-primary.btn-lg(href="{{site.baseurl}}/about/")
+        このサイトについて &raquo;

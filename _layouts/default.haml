@@ -1,0 +1,14 @@
+!!! XML
+!!! 5
+%html
+  %head
+    %meta(charset="UTF-8")
+    %title {{site.brand}}: {{page.title}}
+    {% stylesheet app %}
+    /[if lt IE 9]
+      %script{src:"http://html5shim.googlecode.com/svn/trunk/html5.js"}
+  %body
+    {% haml navbar.haml %}
+    .container
+      {{content}}
+    {% javascript app %}

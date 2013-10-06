@@ -1,0 +1,17 @@
+---
+title: 更新情報
+slug: updates
+layout: default
+---
+%h1.page-header.text-center {{page.title}}
+
+{% for post in site.posts %}
+.col-md-10.col-md-offset-1
+  .panel.panel-default
+    .panel-heading
+      %h2.panel-title
+        .pull-right {{post.date}}
+        %a(href="{{site.baseurl}}{{post.url}}") {{post.title}}
+    .panel-body
+      {{post.content | strip_newlines | strip_html | truncate:200}}
+{% endfor %}

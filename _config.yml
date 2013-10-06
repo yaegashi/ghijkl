@@ -1,0 +1,14 @@
+brand: GHIJKL
+baseurl: /ghijkl
+exclude: ["Gemfile", "Gemfile.lock", "Rakefile"]
+pygment: true
+assets:
+  baseurl: /ghijkl/assets/
+  sources:
+    - _assets/javascripts
+    - _assets/stylesheets
+    - _assets/images
+    - _vendors/jquery
+    - _vendors/pygments
+    - _vendors/sass-bootstrap/js
+    - _vendors/sass-bootstrap/lib

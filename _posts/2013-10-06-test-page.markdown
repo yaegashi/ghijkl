@@ -1,0 +1,40 @@
+---
+title: テストページ
+layout: post
+date: 2013-10-06 12:00:00 +900
+categories: updates
+slug: updates
+---
+## 概要
+
+すこし複雑なテストのページです。
+
+## Brand Colors
+
+`_assets/stylesheets/app.sass` で変更した Bootstrap ブランドカラーのチェック:
+
+<p>
+  <button type="button" class="btn btn-default">Default</button>
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-success">Success</button>
+  <button type="button" class="btn btn-info">Info</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-danger">Danger</button>
+</p>
+
+カスタマイズ可能な項目は <http://getbootstrap.com/customize/> および
+`_vendors/sass-bootstrap/lib/_variables.scss` を参照してください。
+
+## pygments
+
+[pygments](http://pygments.org) によるシンタックスハイライトです。
+
+{% highlight c linenos %}
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+        printf("hello, world.\n");
+        return 0;
+}
+{% endhighlight %}

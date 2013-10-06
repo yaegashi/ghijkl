@@ -1,0 +1,16 @@
+.navbar.navbar-default.navbar-fixed-top
+  .container
+    .navbar-header
+      %button.navbar-toggle{"data-toggle"=>"collapse", "data-target"=>".navbar-collapse"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand {{site.brand}}
+    .collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        %li{class: '{% if page.slug == "home" %}active{% endif %}'}
+          %a(href="{{site.baseurl}}/") ホーム
+        %li{class: '{% if page.slug == "updates" %}active{% endif %}'}
+          %a(href="{{site.baseurl}}/updates/") 更新情報
+        %li{class: '{% if page.slug == "about" %}active{% endif %}'}
+          %a(href="{{site.baseurl}}/about/") このサイトについて
