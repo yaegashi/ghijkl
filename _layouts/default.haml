@@ -6,7 +6,9 @@
     %title {{site.brand}}: {{page.title}}
     {% stylesheet app %}
     /[if lt IE 9]
-      %script{src:"http://html5shim.googlecode.com/svn/trunk/html5.js"}
+      %script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+    %script<
+      {% include analytics.js %}
   %body
     {% haml navbar.haml %}
     .container
