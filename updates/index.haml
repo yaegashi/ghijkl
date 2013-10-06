@@ -13,5 +13,7 @@ layout: default
         .pull-right {{post.date}}
         %a(href="{{site.baseurl}}{{post.url}}") {{post.title}}
     .panel-body
-      {{post.content | strip_newlines | strip_html | truncate:200}}
+      %p {{post.content | strip_newlines | strip_html | truncate:200}}
+      %p
+        %a(href="{{site.baseurl}}{{post.url}}") もっと読む
 {% endfor %}
