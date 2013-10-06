@@ -25,7 +25,7 @@ SASS に変換された Bootstrap として [sass-bootstrap][9] を使用して�
 [4]: https://github.com/samvincent/jekyll-haml
 [5]: https://github.com/ixti/jekyll-assets
 [6]: http://haml.info/
-[7]: http://sass-lang/
+[7]: http://sass-lang.com/
 [8]: https://github.com/bhollis/maruku/blob/master/docs/markdown_syntax.md
 [9]: https://github.com/jlong/sass-bootstrap
 [10]: http://getbootstrap.com/customize/
@@ -34,9 +34,13 @@ SASS に変換された Bootstrap として [sass-bootstrap][9] を使用して�
 
 最初に必要なソフトウェアをインストールします。
 
-Debian wheezy を使っている場合、次のパッケージをインストールしてください。
+Ruby 1.9.3 および Bundler が動く環境であれば十分です。
+Debian (wheezy 以降) や Ubuntu を使っている場合、
+次のパッケージをインストールしてください。
 
-    apt-get install ruby bundler python-pygments
+    sudo apt-get install git ca-certificates
+    sudo apt-get install build-essential python-pygments
+    sudo apt-get install ruby ruby-dev bundler
 
 リポジトリをクローンして
 Bundler で gem をインストールし、
