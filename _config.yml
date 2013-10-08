@@ -12,3 +12,7 @@ assets:
     - _vendors/pygments
     - _vendors/sass-bootstrap/js
     - _vendors/sass-bootstrap/lib
+deploy:
+  dir: _deploy
+  url: git@github.com:yaegashi/ghijkl
+  branch: gh-pages

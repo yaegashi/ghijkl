@@ -7,7 +7,8 @@ layout: default
 
 ## 特徴
 
-[Jekyll][1] と [Twitter Bootstrap 3.0][2] による非常に単純なサイト構築の例です。
+[Jekyll][1] と [Twitter Bootstrap 3.0][2] による非常に単純なサイト構築の例です
+(参照: [ほげめも: Jekyll+BootStrap でサイトリニューアル][blog])。
 
 ソースコードは <https://github.com/yaegashi/ghijkl> にあります。
 また [GitHub Pages][3] として
@@ -29,6 +30,7 @@ SASS に変換された Bootstrap として [sass-bootstrap][9] を使用して�
 [8]: https://github.com/bhollis/maruku/blob/master/docs/markdown_syntax.md
 [9]: https://github.com/jlong/sass-bootstrap
 [10]: http://getbootstrap.com/customize/
+[blog]:http://blog.keshi.org/hogememo/2013/10/07/site-renewal-with-jekyll-and-bootstrap
 
 ## 構築手順
 
@@ -68,3 +70,31 @@ Jekyll でサイトを構築します。
     baseurl: /ghijkl
     assets:
       baseurl: /ghijkl/assets/
+
+## デプロイ手順
+
+[GitHub Pages][3] にデプロイするための
+Rake タスク `deploy` が定義されています。
+
+デプロイ設定は `_config.yml` の `deploy:` に書きます。
+
+    deploy:
+      dir: _deploy
+      url: git@github.com:yaegashi/ghijkl
+      branch: gh-pages
+
+デプロイ先のリポジトリ
+`url` にまだブランチ `branch` がない場合は次のコマンドで作成します。
+
+    bundle exec rake deploy:init
+
+次のコマンドでデプロイを行います。
+
+    bundle exec rake deploy
+
+1. (初回のみ) `dir` に `url` のリポジトリをクローンし `branch` をチェックアウト
+2. `dir` にサイトを出力
+3. (変更点がある場合のみ) Git コミット・プッシュ
+
+ブランチの不整合などでプッシュが失敗する場合には
+`dir` を消してからもう一度試してみてください。
