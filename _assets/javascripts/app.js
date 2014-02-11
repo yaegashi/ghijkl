@@ -1,13 +1,2 @@
 //= require jquery
-//= require affix
-//= require alert
-//= require button
-//= require carousel
-//= require dropdown
-//= require modal
-//= require scrollspy
-//= require tab
-//= require tooltip
-//= require transition
-//= require popover
-//= require collapse
+//= require bootstrap

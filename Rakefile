@@ -1,11 +1,9 @@
 require 'open-uri'
 require 'yaml'
 
-URL_SASS_BOOTSTRAP = "https://github.com/jlong/sass-bootstrap"
 URL_JQUERY = "http://code.jquery.com/jquery-1.10.2.js"
 
 DIR_VENDORS = "_vendors"
-DIR_SASS_BOOTSTRAP = File.join(DIR_VENDORS, "sass-bootstrap")
 DIR_JQUERY = File.join(DIR_VENDORS, "jquery")
 DIR_PYGMENTS = File.join(DIR_VENDORS, "pygments")
 FILE_JQUERY = File.join(DIR_JQUERY, "jquery.js")
@@ -32,7 +30,6 @@ task :vendors do
   end
   FileUtils.mkdir_p DIR_PYGMENTS
   sh "pygmentize -S default -f html > #{FILE_PYGMENTS}"
-  sh "git clone #{URL_SASS_BOOTSTRAP} #{DIR_SASS_BOOTSTRAP}"
 end
 
 desc "Generate the site and push to the remote repository."
