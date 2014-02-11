@@ -7,7 +7,7 @@ layout: default
 
 ## 特徴
 
-[Jekyll][1] と [Twitter Bootstrap 3.0][2] による非常に単純なサイト構築の例です
+[Jekyll][1] と [Twitter Bootstrap 3.1.0][2] による非常に単純なサイト構築の例です
 (参照: [ほげめも: Jekyll+BootStrap でサイトリニューアル][blog])。
 
 ソースコードは <https://github.com/yaegashi/ghijkl> にあります。
@@ -17,7 +17,7 @@ layout: default
 [jekyll-haml][4] と [jekyll-assets][5] の両プラグインを使用しています。
 [HAML][6] [SASS][7] [Markdown][8] による効率的な記述が可能です。
 
-SASS に変換された Bootstrap として [sass-bootstrap][9] を使用しています。
+SASS に変換された Bootstrap として [bootstrap-sass][9] を使用しています。
 [Bootstrap のカスタマイズ][10] が SASS 変数を用いて自由にできます。
 
 [1]: http://jekyllrb.com/
@@ -28,8 +28,8 @@ SASS に変換された Bootstrap として [sass-bootstrap][9] を使用して�
 [6]: http://haml.info/
 [7]: http://sass-lang.com/
 [8]: https://github.com/bhollis/maruku/blob/master/docs/markdown_syntax.md
-[9]: https://github.com/jlong/sass-bootstrap
-[10]: http://getbootstrap.com/customize/
+[9]: https://github.com/twbs/bootstrap-sass
+[10]: http://getbootstrap.com/customize/#less-variables
 [blog]:http://blog.keshi.org/hogememo/2013/10/07/site-renewal-with-jekyll-and-bootstrap
 
 ## 構築手順
@@ -44,9 +44,10 @@ Debian (wheezy 以降) や Ubuntu を使っている場合、
     sudo apt-get install build-essential python-pygments
     sudo apt-get install ruby ruby-dev bundler
 
-リポジトリをクローンして
-Bundler で gem をインストールし、
-Rake で必要なアセット (jQuery, Bootstrap, etc.) を取り込み、
+リポジトリをクローンして Bundler で gem をインストールし、
+Rake で必要なアセット ([jQuery](http://jquery.com/) スクリプトや
+[Pygments](http://pygments.org/) スタイルシート) を
+`_vendors` ディレクトリに配置し、
 Jekyll でサイトを構築します。
 
     git clone https://github.com/yaegashi/ghijkl
