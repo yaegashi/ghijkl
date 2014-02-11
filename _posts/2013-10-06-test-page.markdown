@@ -1,7 +1,7 @@
 ---
 title: テストページ
 layout: post
-date: 2013-10-06 12:00:00 +900
+date: 2013-10-06 12:00:00 +0900
 categories: updates
 slug: updates
 ---
@@ -22,8 +22,11 @@ slug: updates
   <button type="button" class="btn btn-danger">Danger</button>
 </p>
 
-カスタマイズ可能な項目は <http://getbootstrap.com/customize/> および
-`_vendors/sass-bootstrap/lib/_variables.scss` を参照してください。
+カスタマイズ可能な項目は
+<http://getbootstrap.com/customize/#less-variables> および
+[bootstrap-sass](https://github.com/twbs/bootstrap-sass) の
+[`_variables.scss`](https://github.com/twbs/bootstrap-sass/blob/master/vendor/assets/stylesheets/bootstrap/_variables.scss)
+を参照してください。
 
 ## pygments
 

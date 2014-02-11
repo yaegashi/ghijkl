@@ -1,7 +1,7 @@
 ---
 title: 最初の投稿
 layout: post
-date: 2013-10-06 07:34:13 +900
+date: 2013-10-06 07:34:13 +0900
 categories: updates
 slug: updates
 ---
