@@ -4,7 +4,7 @@
   <head>
     <meta charset='UTF-8' />
     <title>GHIJKL: このサイトについて</title>
-    <link rel="stylesheet" href="/ghijkl/assets/app-fde0e40a7b89315d964ce3c6566ebb69.css">
+    <link rel="stylesheet" href="/ghijkl/assets/app-6733be1d8a78052ee85c3203092aa05d.css">
     <!--[if lt IE 9]>
       <script src='http://html5shim.googlecode.com/svn/trunk/html5.js'></script>
     <![endif]-->
@@ -44,79 +44,102 @@ ga('send', 'pageview');
 </div>
 
     <div class='container'>
-      <h1 id="" class="page-header text-center">このサイトについて</h1>
+      <h1 class="page-header text-center" id="section">このサイトについて</h1>
 
-<h2 id="_2">特徴</h2>
+<h2 id="section-1">特徴</h2>
 
-<p><a href="http://jekyllrb.com/">Jekyll</a> と <a href="http://getbootstrap.com/">Twitter Bootstrap 3.1.0</a> による非常に単純なサイト構築の例です (参照: <a href="http://blog.keshi.org/hogememo/2013/10/07/site-renewal-with-jekyll-and-bootstrap">ほげめも: Jekyll+BootStrap でサイトリニューアル</a>)。</p>
+<p><a href="http://jekyllrb.com/">Jekyll 2.2.0</a> と <a href="http://getbootstrap.com/">Twitter Bootstrap 3.2.0</a>
+による非常に単純なサイト構築の例です
+(参照: <a href="http://blog.keshi.org/hogememo/2013/10/07/site-renewal-with-jekyll-and-bootstrap">ほげめも: Jekyll+BootStrap でサイトリニューアル</a>)。</p>
 
-<p>ソースコードは <a href="https://github.com/yaegashi/ghijkl">https://github.com/yaegashi/ghijkl</a> にあります。 また <a href="http://pages.github.com/">GitHub Pages</a> として <a href="http://yaegashi.github.io/ghijkl">http://yaegashi.github.io/ghijkl</a> にデプロイしています。</p>
+<p>ソースコードは <a href="https://github.com/yaegashi/ghijkl">https://github.com/yaegashi/ghijkl</a> にあります。
+また <a href="http://pages.github.com/">GitHub Pages</a> として
+<a href="http://yaegashi.github.io/ghijkl">http://yaegashi.github.io/ghijkl</a> にデプロイしています。</p>
 
-<p><a href="https://github.com/samvincent/jekyll-haml">jekyll-haml</a> と <a href="https://github.com/ixti/jekyll-assets">jekyll-assets</a> の両プラグインを使用しています。 <a href="http://haml.info/">HAML</a> <a href="http://sass-lang.com/">SASS</a> <a href="https://github.com/bhollis/maruku/blob/master/docs/markdown_syntax.md">Markdown</a> による効率的な記述が可能です。</p>
+<p><a href="https://github.com/samvincent/jekyll-haml">jekyll-haml</a> と <a href="https://github.com/ixti/jekyll-assets">jekyll-assets</a> の両プラグインを使用しています。
+<a href="http://haml.info/">HAML</a> <a href="http://sass-lang.com/">SASS</a> <a href="https://github.com/bhollis/maruku/blob/master/docs/markdown_syntax.md">Markdown</a> による効率的な記述が可能です。</p>
 
-<p>SASS に変換された Bootstrap として <a href="https://github.com/twbs/bootstrap-sass">bootstrap-sass</a> を使用しています。 <a href="http://getbootstrap.com/customize/#less-variables">Bootstrap のカスタマイズ</a> が SASS 変数を用いて自由にできます。</p>
+<p>SASS に変換された Bootstrap として <a href="https://github.com/twbs/bootstrap-sass">bootstrap-sass</a> を使用しています。
+<a href="http://getbootstrap.com/customize/#less-variables">Bootstrap のカスタマイズ</a> が SASS 変数を用いて自由にできます。</p>
 
-<h2 id="_3">構築手順</h2>
+<h2 id="section-2">構築手順</h2>
 
 <p>最初に必要なソフトウェアをインストールします。</p>
 
-<p>Ruby 1.9.3 および Bundler が動く環境であれば十分です。 Debian (wheezy 以降) や Ubuntu を使っている場合、 次のパッケージをインストールしてください。</p>
+<p>Ruby 1.9.3 および Bundler が動く環境であれば十分です。
+Debian (wheezy 以降) や Ubuntu を使っている場合、
+次のパッケージをインストールしてください。</p>
 
 <pre><code>sudo apt-get install git ca-certificates
 sudo apt-get install build-essential python-pygments
-sudo apt-get install ruby ruby-dev bundler</code></pre>
+sudo apt-get install ruby ruby-dev bundler
+</code></pre>
 
-<p>リポジトリをクローンして Bundler で gem をインストールし、 Rake で必要なアセット (<a href="http://jquery.com/">jQuery</a> スクリプトや <a href="http://pygments.org/">Pygments</a> スタイルシート) を <code>_vendors</code> ディレクトリに配置し、 Jekyll でサイトを構築します。</p>
+<p>リポジトリをクローンして Bundler で gem をインストールし、
+Rake で必要なアセット (<a href="http://jquery.com/">jQuery</a> スクリプトや
+<a href="http://pygments.org/">Pygments</a> スタイルシート) を
+<code>_vendors</code> ディレクトリに配置し、
+Jekyll でサイトを構築します。</p>
 
 <pre><code>git clone https://github.com/yaegashi/ghijkl
 cd ghijkl
 bundle install --path _bundle
 bundle exec rake vendors
-bundle exec jekyll build</code></pre>
+bundle exec jekyll build
+</code></pre>
 
 <p>これにより <code>_site</code> ディレクトリに構築されたサイトが出力されます。</p>
 
 <p>次のコマンドによりテスト用の web サーバが起動できます。</p>
 
-<pre><code>bundle exec jekyll serve --watch</code></pre>
+<pre><code>bundle exec jekyll serve --watch
+</code></pre>
 
-<p><a href="http://server:4000/ghijkl/">http://server:4000/ghijkl/</a> より構築されたサイトが確認可能です。 またソースコードを変更するとサイトも自動的に再構築されます。</p>
+<p><a href="http://server:4000/ghijkl/">http://server:4000/ghijkl/</a> より構築されたサイトが確認可能です。
+またソースコードを変更するとサイトも自動的に再構築されます。</p>
 
-<p><a href="http://yaegashi.github.io/ghijkl">http://yaegashi.github.io/ghijkl</a> にデプロイするために <code>_config.yml</code> にて次のように設定していることに注意してください。</p>
+<p><a href="http://yaegashi.github.io/ghijkl">http://yaegashi.github.io/ghijkl</a> にデプロイするために
+<code>_config.yml</code> にて次のように設定していることに注意してください。</p>
 
 <pre><code>baseurl: /ghijkl
 assets:
-  baseurl: /ghijkl/assets/</code></pre>
+  baseurl: /ghijkl/assets/
+</code></pre>
 
-<h2 id="_4">デプロイ手順</h2>
+<h2 id="section-3">デプロイ手順</h2>
 
-<p><a href="http://pages.github.com/">GitHub Pages</a> にデプロイするための Rake タスク <code>deploy</code> が定義されています。</p>
+<p><a href="http://pages.github.com/">GitHub Pages</a> にデプロイするための
+Rake タスク <code>deploy</code> が定義されています。</p>
 
 <p>デプロイ設定は <code>_config.yml</code> の <code>deploy:</code> に書きます。</p>
 
 <pre><code>deploy:
   dir: _deploy
   url: git@github.com:yaegashi/ghijkl
-  branch: gh-pages</code></pre>
+  branch: gh-pages
+</code></pre>
 
-<p>デプロイ先のリポジトリ <code>url</code> にまだブランチ <code>branch</code> がない場合は次のコマンドで作成します。</p>
+<p>デプロイ先のリポジトリ
+<code>url</code> にまだブランチ <code>branch</code> がない場合は次のコマンドで作成します。</p>
 
-<pre><code>bundle exec rake deploy:init</code></pre>
+<pre><code>bundle exec rake deploy:init
+</code></pre>
 
 <p>次のコマンドでデプロイを行います。</p>
 
-<pre><code>bundle exec rake deploy</code></pre>
+<pre><code>bundle exec rake deploy
+</code></pre>
 
 <ol>
-<li>(初回のみ) <code>dir</code> に <code>url</code> のリポジトリをクローンし <code>branch</code> をチェックアウト</li>
-
-<li><code>dir</code> にサイトを出力</li>
-
-<li>(変更点がある場合のみ) Git コミット・プッシュ</li>
+  <li>(初回のみ) <code>dir</code> に <code>url</code> のリポジトリをクローンし <code>branch</code> をチェックアウト</li>
+  <li><code>dir</code> にサイトを出力</li>
+  <li>(変更点がある場合のみ) Git コミット・プッシュ</li>
 </ol>
 
-<p>ブランチの不整合などでプッシュが失敗する場合には <code>dir</code> を消してからもう一度試してみてください。</p>
+<p>ブランチの不整合などでプッシュが失敗する場合には
+<code>dir</code> を消してからもう一度試してみてください。</p>
+
     </div>
-    <script src="/ghijkl/assets/app-f4d988a99fda098e819d86c0cc95d8ba.js"></script>
+    <script src="/ghijkl/assets/app-ba34c699249b49b6abc4a9141140033f.js"></script>
   </body>
 </html>
