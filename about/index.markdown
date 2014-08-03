@@ -3,11 +3,13 @@ title: このサイトについて
 slug: about
 layout: default
 ---
-# {{page.title}} {: .page-header .text-center}
+# {{page.title}}
+{: .page-header .text-center}
 
 ## 特徴
 
-[Jekyll][1] と [Twitter Bootstrap 3.1.0][2] による非常に単純なサイト構築の例です
+[Jekyll 2.2.0][1] と [Twitter Bootstrap 3.2.0][2]
+による非常に単純なサイト構築の例です
 (参照: [ほげめも: Jekyll+BootStrap でサイトリニューアル][blog])。
 
 ソースコードは <https://github.com/yaegashi/ghijkl> にあります。
